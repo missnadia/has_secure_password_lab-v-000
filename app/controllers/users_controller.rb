@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.create(user_params).save
   end
 
   def destroy
@@ -14,7 +14,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :name, :password, :password_digest
+      :name,
+      :password,
+      :password_digest,
+      :password_confirmation
     )
   end
 end
