@@ -10,9 +10,6 @@ class UsersController < ApplicationController
     redirect_to controller: 'users', action: 'show'
   end
 
-  def destroy
-  end
-
   private
 
   def user_params
