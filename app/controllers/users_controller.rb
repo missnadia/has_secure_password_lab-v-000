@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     redirect_to controller: 'users', action: 'home'
   end
 
-  def show
+  def home
   end
 
   private
