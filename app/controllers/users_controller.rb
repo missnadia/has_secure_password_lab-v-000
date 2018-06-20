@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     redirect_to controller: 'users', action: 'show'
   end
 
+  def show
+  end
+
   private
 
   def user_params
