@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params).save
     return redirect_to(controller: 'users', action: 'new') unless @user.save
     session[:user_id] = @user.id
-    redirect_to controller: 'sessions', action: 'show'
+    redirect_to controller: 'users', action: 'home'
   end
 
   def show
